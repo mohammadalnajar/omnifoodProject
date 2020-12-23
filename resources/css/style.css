@@ -4,12 +4,13 @@
     box-sizing: border-box;
     /* transition: all .2s ease; */
 }
+
 body{
     overflow-x: hidden;
     max-width: 100%;
 }
 html {
-    width: 100vw;
+    width: 100%;
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
@@ -45,6 +46,9 @@ html {
 }
 header{
     display: flex;
+    width: 100%;
+    margin: 0px;
+    
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -97,19 +101,25 @@ header{
 /* -----------------NAVBAR------------- */
 .nav {
     display: flex;
-    height: 100px;
+    width: 100%;
+    /* padding-right: 20px; */
+    /* margin: 0px 20px 0px 0px; */
     align-items: center;
     /* margin-top: 20px; */
+    padding:10px 20px 10px 0px;
 }
-.nav .nav-bar{
+.nav-bar{
     margin-top: 20px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-left: auto;
     margin-right: 50px;
     list-style: none;
     overflow: hidden;
 }
+
+
 .nav .nav-bar li{
     margin: 0px 10px;
     height: 100%;
@@ -161,6 +171,7 @@ header{
 .nav .nav-bar li:hover .border-v{
     height: 25px;
 }
+
 /* .border-h1{
     margin-top: 5px;
     display: block;
@@ -189,6 +200,32 @@ header{
 .nav-bar li:hover a::before{
     width: 100%;
 } */
+.menu-open-button,.menu-close-button{
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.205);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    display: none;
+    animation-duration: 1s;
+    background-color: rgba(255, 255, 255, 0.603);
+}
+.menu-close-button{
+    /* border: 1px solid white; */
+    color: white;
+    /* background-color: white; */
+}
+
+.menu-open-btn,.menu-close-btn{
+    font-size: 2rem;
+    color: black;
+    margin: 0px 3px;
+    
+    
+    
+}
 
 /* ---STICKY_NAV--- */
 .sticky{
@@ -198,6 +235,7 @@ header{
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.164);
     z-index: 1000;
     margin: 0px 0px;
+    padding:20px 0px 10px 0px;
 }
 .sticky #logo-img-black{
     display:block;
@@ -212,6 +250,7 @@ header{
     display: none;
     
 }
+
 .sticky .nav-bar{
     margin-top: 0px;
     margin-bottom :0px ;
@@ -222,8 +261,19 @@ header{
     margin-right: 50px;
     list-style: none;
 }
+.sticky .nav-bar li{
+    padding: 0;
+}
 .sticky .nav-bar li a{
-    padding: 30px 0;
+    padding: 10px 0;
+    height: 100%;
+}
+
+.sticky .menu-open-btn,.menu-close-btn{
+    color: black;
+}
+.sticky .menu-open-button,.menu-close-button{
+    margin-right: 10px;
 }
 /* .sticky  */
 @media only screen and (max-width:700px){
@@ -567,6 +617,7 @@ display: block;
     justify-items: center;
     grid-template-columns: repeat(auto-fit ,minmax(300px,1fr));
 }
+
 .review{
     width: 300px;
     margin: 30px 10px 30px 10px;
@@ -682,6 +733,7 @@ display: block;
     margin: 20px 0px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.247);
 }
+
 .signup-plan ul{
     list-style: none;
     margin: 30px 0px;
@@ -802,6 +854,7 @@ form{
 .copy-right{
     margin-top:auto ;
 }
+
 .copy-right p{
     text-align: center;
     letter-spacing: 1px;
@@ -841,6 +894,7 @@ form{
 .social-nav ul li{
     font-size: 1.4rem;
 }
+
 .social-nav ul li:nth-child(1):hover{
     color: #3b5998;
 }
@@ -861,4 +915,59 @@ form{
 
 /* .features.animate__animated{
     opacity: 1;
+} */
+
+/* ------mdeiaQuery-FOR-NAV-bar */
+
+@media only screen and (max-width:768px){
+    .nav-bar{
+        display:none;
+    }
+    .sticky .nav-bar{
+        display: none;
+       
+    }
+    .menu-open-button{
+        display: block;
+        margin-left: auto;
+    }
+    .menu-open-button{
+        margin-left: auto;
+    }
+    .display-flex{
+        display: flex;
+    }
+    .display-block{
+        display: block;
+        margin-left: auto;
+        margin-top: 20px;
+        align-self: flex-start;
+    }
+    .display-none{
+        display: none;
+    }
+    .f-direction-c{
+        flex-direction: column;
+    }
+    .f-direction-r{
+        flex-direction: row;
+    }
+    .nav{
+        display:flex;
+    }
+    #logo-img,#logo-img-black{
+        align-self: flex-start;
+    }
+    .menu-open-button{
+        align-self: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+/* @media only screen and (min-width:768px){
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+       
+    }
 } */
