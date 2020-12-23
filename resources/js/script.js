@@ -4,7 +4,7 @@
         // -------------SRICKY_NAV----------------
         $(window).scroll(function(){
             var sec1=$('.js-feature').offset().top;
-            if ($(window).scrollTop() >= sec1 - 300 ) {
+            if ($(window).scrollTop() >= sec1 - 150 ) {
                 $('nav').addClass("sticky");
             } else {$('nav').removeClass("sticky")}
         })
