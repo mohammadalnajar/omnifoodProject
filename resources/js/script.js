@@ -1,3 +1,30 @@
+// -------SELECTORS--------
+// const openBtn=document.getElementById("openBUTTON");
+// const navBar=document.getElementsByClassName("nav-bar")[0];
+// var stickyNav=document.querySelectorAll(".sticky .nav-bar");
+// const nav=document.getElementsByClassName("nav");
+// const h1=document.getElementById("h1-features");
+
+// // -------FUNCTIONS---------
+// function open(){
+//     h1.style.color="red";
+//     navBar.classList.toggle("display-flex");
+//     navBar.classList.toggle("f-direction-c");
+//     // if (nav.classList.contains('sticky')){
+//     //     console.log("hello");
+//     //     navBar.classList.toggle("display-flex");
+//     // navBar.classList.toggle("f-direction-c");
+//     // }
+//     // stickyNav.classList.toggle("display-flex");
+//     // stickyNav.classList.toggle("f-direction-c");
+    
+    
+// }
+// // ------EVENTS--------
+// openBtn.onclick=open;
+
+
+
 // $(document).ready(function(){
 //     $('.js-feature').waypoint(function(direction){
 //         if (direction == "down" ){
@@ -88,6 +115,86 @@
             }
         })
 
+        //   -----------mediaQuery-for-NAV_BAR--------
+
+    $('.menu-open-button').click(function(){
+        $('.nav-bar').slideToggle(500);
+        $('.menu-open-button').addClass("display-none");
+        $('.menu-close-button').addClass("display-block");
+    
+        // $('.sticky ul.nav-bar').addClass('display-flex');
+        // $(".sticky ul.nav-bar").addClass('f-direction-c');
+        // $('.nav-bar').addClass('display-flex');
+        // $(".nav-bar").addClass('f-direction-c');
+        // $(".menu-open-button").addClass("display-none");
+        // $(".menu-close-button").addClass("display-block");
+
+    })
+    $('.menu-close-button').click(function(){
+        $('.nav-bar').slideToggle(500);
+        $('.menu-open-button').removeClass("display-none");
+        $('.menu-close-button').removeClass("display-block");
+    })
+    // $('.menu-close-button').click(function(){
+    //     $('.sticky .nav-bar').removeClass('display-flex');
+    //     $(".sticky .nav-bar").removeClass('f-direction-c');
+    //     $('.nav-bar').removeClass('display-flex');
+    //     $(".nav-bar").removeClass('f-direction-c');
+    //     $(".menu-open-button").removeClass("display-none");
+    //     $(".menu-close-button").removeClass("display-block");
+
+    // })
+        // var open=$('.menu-open-button ion-icon');
+        // var close=$('.menu-close-button ion-icon')
+            // $('.sticky .nav-bar').toggleClass("display-flex");
+            // $('.sticky .nav-bar').toggleClass("f-direction-c");
+
+        //     if($('nav').hasClass("nav")&&$('nav').hasClass("sticky")){
+              
+        //     $(".sticky .nav-bar").toggleClass("display-none");
+        //     // $(".sticky .nav-bar").toggleClass("f-direction-c");
+        // }
+        //   $('.nav-bar').slideToggle(500);
+    //    $(".nav").addClass('display-block');
+      
+       
+       
+        // if($(window).width() > 767){
+            
+        //     //  if nav has no sticky then display flex (try this tonight)
+
+        //     $('.nav-bar').addClass('display-flex');
+        // }
+    //    $('.nav-bar').toggleClass('display-flex f-direction-c', 1000, 'easeOutSine');
+       
+    //    $('.sticky .nav-bar').toggleClass('display-flex f-direction-c', 100);
+    
+    //     })
+
+    //    $(".menu-open-button").addClass("display-none");
+    //    $(".menu-close-button").addClass("display-block");
+    //    $(".menu-close-button").css("margin-left","auto");
+    //    $(".menu-close-button").addClass("display-block");
+
+       
+        
+    
+    // $('.menu-close-button').click(function(){
+    // //    $(".nav").addClass('display-block');
+    //    $(".menu-open-button").removeClass("display-none");
+    //    $(".menu-close-button").removeClass("display-block");
+
+       
+        
+    // })
+
+    // $(window).resize(function(){
+
+    //     if ($(window).width()>=678){
+    //         $('.nav-bar').addClass('display-flex');
+    //     }
+    // })
+
     });
 
 
@@ -106,4 +213,11 @@ var typed5 = new Typed(".type1", {
     backDelay: 2000,
     smartBackspace: false,
     loop: true
+
+
+
+    
   });
+
+
+
